@@ -5,6 +5,7 @@ import {images} from '../../constants'
 import Formfield from '@/components/Formfield'
 import { useState } from 'react'
 import CustomButton from '@/components/customButton'
+import { Link } from 'expo-router'
 
 const SignIn = () => {
     const [form, setform] = useState({
@@ -12,7 +13,9 @@ const SignIn = () => {
         password : ''
     })
     const [isSubmitting, setisSubmitting] = useState(false)
-    const submit = () => {}
+    const submit = () => {
+        
+    }
     return (
         <SafeAreaView className = 'bg-primary h-full'>
             <ScrollView>
@@ -37,21 +40,25 @@ const SignIn = () => {
                         handleTextChange={(e) => setform({...form,password:e})}
                         placeholder='Enter your password'
                         styles='mt-7'
-                        keyboardType='password'/>
+
+                        />
                         <CustomButton
                             title='sign-in'
                             handlePress={submit}
                             containerStyle='mt-7'
                             isLoading={isSubmitting}
+
                         />
 
                         <View className='flex-row justify-center pt-5'>
                             <Text className='text-gray-100 text-lg font-pregular'>
                                 Don't have an account?
                             </Text>
-                            <Text className='text-secondary-200 font-psemibold ml-1'>
+                            <Link href={'/sign-up'}>
+                            <Text className='text-secondary-200 text-lg font-psemibold ml-1'>
                                 Sign up
                             </Text>
+                            </Link>
                             </View>
                 </View>
             </ScrollView>

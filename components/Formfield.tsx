@@ -8,7 +8,7 @@ interface FormfieldProps {
     value: string
     handleTextChange: (text: string) => void
     styles?: string
-    keyboardType:'email-address'
+    keyboardType?:'email-address'
     placeholder: string
 
 }
@@ -25,7 +25,7 @@ const Formfield = ({title,value,handleTextChange,styles,keyboardType ,placeholde
             onChangeText={handleTextChange}
             placeholder={placeholder}
             placeholderTextColor='#7b7b8b'
-            secureTextEntry={title === 'Password' ? true : false }
+            secureTextEntry={title === 'Password' && Password} 
         />
         {title === 'Password' && (
             <TouchableOpacity
