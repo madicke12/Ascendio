@@ -14,12 +14,12 @@ const SignIn = () => {
     })
     const [isSubmitting, setisSubmitting] = useState(false)
     const submit = () => {
-        
+
     }
     return (
         <SafeAreaView className = 'bg-primary h-full'>
             <ScrollView>
-                <View className='min-h-[85vh] w-full px-4 my-6'>
+                <View className='min-h-[83vh] justify-center w-full px-4 my-6'>
                     <Image source={images.logo} className='w-[110px] h-[35px]' resizeMode='contain'/>
                     <Text className='text-2xl text-white text-semibold mt-10 font-psemibold'>
                         Login in to Aora
