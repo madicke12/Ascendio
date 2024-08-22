@@ -20,6 +20,7 @@ const Formfield = ({title,value,handleTextChange,styles,keyboardType ,placeholde
       <Text className='text-base font-pmedium text-gray-100'>{title}</Text>
       <View className='border-2  rounded-2xl focus:border-secondary-100 flex-row items-center w-full h-16 px-4 bg-black-100 '>
         <TextInput
+  
             className=' text-white text-base flex-1 font-psemibold'
             value={value}
             onChangeText={handleTextChange}

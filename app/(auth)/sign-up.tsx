@@ -6,7 +6,7 @@ import Formfield from '@/components/Formfield'
 import { useState } from 'react'
 import CustomButton from '@/components/customButton'
 import { Link } from 'expo-router'
-
+import {createUser} from '../../lib/appwrite'
 const Signup = () => {
     const [form, setform] = useState({
         username:'',
@@ -14,8 +14,8 @@ const Signup = () => {
         password : ''
     })
     const [isSubmitting, setisSubmitting] = useState(false)
-    const submit = () => {
-
+    const submit = async ( ) => {
+      await createUser(form.email,form.password,form.username)
     }
     return (
         <SafeAreaView className = 'bg-primary h-full'>
