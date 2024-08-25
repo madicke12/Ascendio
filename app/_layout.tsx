@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { Link, SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font'
+import { GLobalprovider } from '@/context/global_provider_'
 
 
 const RootLayout = () => {
@@ -32,6 +33,7 @@ const RootLayout = () => {
     }
     return (
         <>
+        <GLobalprovider>
        
                 <Stack>
                     <Stack.Screen name="index" options={{
@@ -47,8 +49,9 @@ const RootLayout = () => {
                         headerShown: false,
                     }} />
                 </Stack>
-        </>
+        </GLobalprovider>
 
+        </>
     )
 }
 
